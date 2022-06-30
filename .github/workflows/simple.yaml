@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: action-test
+
+on: [push]
+
+jobs:
+    run-shell-command:
+        run-on: ubuntu-latest
+        steps:
+            - name: echo my first action action-test
+              run: echo "My first action test"
+            - name: Multiline script
+              run: |
+                  node -v
+                  npm -v
+                  
